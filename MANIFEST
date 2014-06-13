@@ -9,6 +9,7 @@ README.md
 MANIFEST.SKIP
 META.yml                        Module meta-data (added by MakeMaker)
 t/00-load.t
+t/amazon-functional-test.t
 t/manifest.t
 t/pod.t
 t/style-no-tabs.t
