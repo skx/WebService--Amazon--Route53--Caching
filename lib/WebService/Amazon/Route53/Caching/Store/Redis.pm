@@ -1,4 +1,26 @@
 
+=head1 NAME
+
+WebService::Amazon::Route53::Caching::Store::Redis - Redis-based cache-storage.
+
+=head1 SYNOPSIS
+
+This module implements several methods which makes it possible to
+get/set/delete cached values by a string-key.
+
+The module will expect to be passed an open/valid Redis handle in the
+constructor:
+
+=for example begin
+
+    my $redis = Redis->new();
+    my $cache = WebService::Amazon::Route53::Caching::Store::Redis->new( redis => $redis );
+
+=for example end
+
+=cut
+
+
 package WebService::Amazon::Route53::Caching::Store::Redis;
 
 use strict;

@@ -1,4 +1,19 @@
 
+=head1 NAME
+
+WebService::Amazon::Route53::Caching::Store::NOP - Dummy cache-storage.
+
+=head1 SYNOPSIS
+
+This module implements several methods which makes it possible to
+get/set/delete cached values by a string-key.
+
+The implementation of these methods are NOPs (no-operations), which
+means nothing is ever cached.
+
+=cut
+
+
 use strict;
 use warnings;
 
