@@ -20,13 +20,15 @@ ok( -e $file, "We created a temporary file" );
 #
 # Delete the file, and create an object
 #
-unlink( $file );
-my $cache = WebService::Amazon::Route53::Caching::Store::DBM->new( path => $file );
+unlink($file);
+my $cache =
+  WebService::Amazon::Route53::Caching::Store::DBM->new( path => $file );
 
 #
 # Ensure the object has the correct type.
 #
-isa_ok( $cache, "WebService::Amazon::Route53::Caching::Store::DBM",
+isa_ok( $cache,
+        "WebService::Amazon::Route53::Caching::Store::DBM",
         "The cache has the correct type" );
 
 #
@@ -36,20 +38,21 @@ isa_ok( $cache, "WebService::Amazon::Route53::Caching::Store::DBM",
 #
 ok( !-e $file, "The backing file is absent" );
 $cache->set( "steve", "kemp" );
-ok( -e $file, "The backing file is created when a value is set");
+ok( -e $file, "The backing file is created when a value is set" );
 
 #
 #  Retrieving the value should work
 #
-is( $cache->get( "steve"), "kemp", "Retrieving a value worked" );
+is( $cache->get("steve"), "kemp", "Retrieving a value worked" );
 
 #
 #  Now delete the value and ensure the lookup fails
 #
-$cache->del( "steve");
-is( $cache->get( "steve"),undef, "Lookup of a deleted value fails as expected");
+$cache->del("steve");
+is( $cache->get("steve"), undef,
+    "Lookup of a deleted value fails as expected" );
 
 #
 #  Cleanup
 #
-unlink( $file ) if ( -e $file );
+unlink($file) if ( -e $file );

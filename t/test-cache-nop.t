@@ -18,14 +18,16 @@ my $cache = WebService::Amazon::Route53::Caching::Store::NOP->new();
 #
 #  Ensure it is of the right type
 #
-isa_ok( $cache, "WebService::Amazon::Route53::Caching::Store::NOP",
+isa_ok( $cache,
+        "WebService::Amazon::Route53::Caching::Store::NOP",
         "The cache has the correct type" );
 
 
 #
 #  Ensure all expected methods are present
 #
-foreach my $method ( qw! get set del ! )
+foreach my $method (qw! get set del !)
 {
-    ok( UNIVERSAL::can( $cache, $method ), "The expected method is present $method" );
+    ok( UNIVERSAL::can( $cache, $method ),
+        "The expected method is present $method" );
 }

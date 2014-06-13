@@ -40,12 +40,15 @@ SKIP:
     skip "Redis must be running on localhost" unless ( !$skip );
 
 
-    my $cache = WebService::Amazon::Route53::Caching::Store::Redis->new( redis => $redis );
+    my $cache =
+      WebService::Amazon::Route53::Caching::Store::Redis->new(
+                                                              redis => $redis );
 
     #
     # Ensure the object has the correct type.
     #
-    isa_ok( $cache, "WebService::Amazon::Route53::Caching::Store::Redis",
+    isa_ok( $cache,
+            "WebService::Amazon::Route53::Caching::Store::Redis",
             "The cache has the correct type" );
 
 
@@ -53,13 +56,13 @@ SKIP:
     #  Try to set a value
     #
     $cache->set( "steve", "kemp" );
-    is( $cache->get( "steve" ), "kemp", "Storing a value worked ");
+    is( $cache->get("steve"), "kemp", "Storing a value worked " );
 
     #
     # Now delete that value
     #
-    $cache->del( "steve");
-    is( $cache->get( "steve" ), undef, "Storing a value worked ");
+    $cache->del("steve");
+    is( $cache->get("steve"), undef, "Storing a value worked " );
 
-};
+}
 
