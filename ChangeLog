@@ -10,3 +10,9 @@
 	- Store two-way mappings between the zone ID and the zone name.
 	  This allows deletions to succeed correctly.
 
+0.4 - 13-06-2014
+	- Correctly remove keys when zones are deleted.
+	- Added POD to the caching back-ends.
+	- Added test-cases.
+	- Added README.md
+	- Posted code to GitHub.com
