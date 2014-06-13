@@ -244,6 +244,7 @@ sub create_hosted_zone
         my $id = $result->{'id'};
         if ( $id )
         {
+            $id =~ s/\/hostedzone\///g;
             $self->{ '_cache' }
               ->set( "zone_data_id_" . $id, $args{'name'} );
         }
