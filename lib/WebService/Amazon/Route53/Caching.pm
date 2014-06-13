@@ -241,7 +241,7 @@ sub create_hosted_zone
         #
         # Store the mapping from the returned ID to the domain-data.
         #
-        my $id = $result->{'id'};
+        my $id = $result->{'zone'}->{'id'} || $result->{'id'};
         if ( $id )
         {
             $id =~ s/\/hostedzone\///g;
@@ -273,6 +273,7 @@ sub delete_hosted_zone
     {
         carp "Required parameter 'zone_id' is not defined";
     }
+
 
     #
     #  Remove the cache-data associated with this key.
