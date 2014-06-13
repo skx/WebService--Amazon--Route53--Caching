@@ -4,6 +4,7 @@ use strict;
 use ExtUtils::MakeMaker;
 
 my %prereq_pm = ( 'WebService::Amazon::Route53'    => undef,
+                  'Test::More'                     => undef,
                   'JSON'                           => undef,
                 );
 
@@ -18,6 +19,9 @@ WriteMakefile(
     META_MERGE => {
         resources => {
             license    => 'http://dev.perl.org/licenses/',
+            homepage   => 'https://github.com/skx/WebService--Amazon--Route53--Caching/',
+            bugtracker => 'https://github.com/skx/WebService--Amazon--Route53--Caching/issues',
+            repository => 'https://github.com/skx/WebService--Amazon--Route53--Caching.git',
                      },
                   },
              );
