@@ -20,7 +20,11 @@ no_index:
     - inc
 requires:
   JSON: ~
+  Test::More: ~
   WebService::Amazon::Route53: ~
 resources:
+  bugtracker: https://github.com/skx/WebService--Amazon--Route53--Caching/issues
+  homepage: https://github.com/skx/WebService--Amazon--Route53--Caching/
   license: http://dev.perl.org/licenses/
+  repository: https://github.com/skx/WebService--Amazon--Route53--Caching.git
 version: 0.3
