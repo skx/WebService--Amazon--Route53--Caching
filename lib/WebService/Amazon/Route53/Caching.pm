@@ -289,4 +289,20 @@ sub delete_hosted_zone
     return ( $self->SUPER::delete_hosted_zone(%args) );
 }
 
+
+=begin doc
+
+Allow the caller to gain access to our caching object.
+
+=end doc
+
+=cut
+
+sub cache
+{
+    my( $self ) = ( @_ );
+    return( $self->{'_cache'} );
+}
+
 1;
+
