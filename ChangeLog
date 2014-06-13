@@ -1,0 +1,12 @@
+0.1 - 12-06-2014
+	- Initial release.
+
+0.2 - 12-06-2014
+	- Created class-hierarchy to allow different storage backends.
+	- Allow Redis to be used as a backing store.
+	- Updated POD.
+
+0.3 - 13-06-2014
+	- Store two-way mappings between the zone ID and the zone name.
+	  This allows deletions to succeed correctly.
+
