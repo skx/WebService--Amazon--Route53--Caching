@@ -132,6 +132,7 @@ sub del
     tie %h, "DB_File", $self->{ '_path' }, O_RDWR | O_CREAT, 0666, $DB_HASH or
       return;
 
+    $h{$key} = "[deleted]";
     delete $h{ $key };
     untie(%h);
 }

@@ -96,6 +96,7 @@ sub del
 {
     my ( $self, $key ) = (@_);
 
+    $self->{ '_handle' }->set($key, "[deleted]" );
     return ( $self->{ '_handle' }->del($key) );
 }
 
