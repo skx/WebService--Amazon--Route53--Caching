@@ -5,6 +5,7 @@ use ExtUtils::MakeMaker;
 
 my %prereq_pm = ( 'WebService::Amazon::Route53'    => undef,
                   'Test::More'                     => undef,
+                  'Test::NoTabs'                   => undef,
                   'JSON'                           => undef,
                 );
 

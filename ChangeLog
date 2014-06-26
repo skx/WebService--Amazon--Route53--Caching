@@ -16,3 +16,6 @@
 	- Added test-cases.
 	- Added README.md
 	- Posted code to GitHub.com
+
+0.5 - 26-06-2014
+	- Added Test::NoTabs dependency to all test-cases to complete.
