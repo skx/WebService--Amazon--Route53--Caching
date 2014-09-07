@@ -17,5 +17,7 @@
 	- Added README.md
 	- Posted code to GitHub.com
 
-0.5 - 26-06-2014
-	- Added Test::NoTabs dependency to all test-cases to complete.
+0.4.1 - 07-08-2014
+	- Added dependencies for test-suite, Test::NoTabs, Test::Strict, etc.
+	- Added license file to repository.
+	- Added license to POD.

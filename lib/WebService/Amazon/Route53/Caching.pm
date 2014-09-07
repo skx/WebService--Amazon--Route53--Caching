@@ -114,7 +114,7 @@ use WebService::Amazon::Route53::Caching::Store::NOP;
 use WebService::Amazon::Route53::Caching::Store::Redis;
 
 use JSON;
-our $VERSION = "0.5";
+our $VERSION = "0.4.1";
 
 
 
