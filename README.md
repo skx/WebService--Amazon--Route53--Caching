@@ -33,7 +33,7 @@ Minor Optimizations
 
 * When a zone is created the ID is returned, so we pre-emptively add it to the cache.
 * When a zone is deleted we purge the cache of the appropriate records.
-* We reconfigure the internal HTTP-client to use HTTP Keep-ALive
+* We reconfigure the internal HTTP-client to use HTTP Keep-Alive
     * Which in testing can speedup fetchs by almost 50%.
 
 
