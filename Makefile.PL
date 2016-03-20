@@ -18,9 +18,10 @@ my %WriteMakefileArgs = (
     MIN_PERL_VERSION => '5.008',
 
     PREREQ_PM    => {
-                     'WebService::Amazon::Route53'    => 0,
-                     'JSON'                           => 0,
-                     'Redis'                          => 0,
+                     'DB_File'                     => 0,
+                     'JSON'                        => 0,
+                     'Redis'                       => 0,
+                     'WebService::Amazon::Route53' => 0,
                     },
 
     TEST_REQUIRES => {
