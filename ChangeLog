@@ -1,7 +1,5 @@
 0.1 - 12-06-2014
-	- Initial release.
-
-0.2 - 12-06-2014
+	- Initial release.  0.2 - 12-06-2014
 	- Created class-hierarchy to allow different storage backends.
 	- Allow Redis to be used as a backing store.
 	- Updated POD.
@@ -21,3 +19,7 @@
 	- Added dependencies for test-suite, Test::NoTabs, Test::Strict, etc.
 	- Added license file to repository.
 	- Added license to POD.
+
+0.4.2 - 20-03-2016
+    - Added missing dependency upon DB_File.
+
